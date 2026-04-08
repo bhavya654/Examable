@@ -41,8 +41,8 @@
 
 1. Go to **Database Access** (left sidebar)
 2. Click **Add Database User**
-3. **Username:** `bhavyaksingh654_db_user`
-4. **Password:** `faslDeOImf3QaDW8`
+3. **Username:** `your_database_username`
+4. **Password:** `your_database_password`
 5. **Database User Privileges:** Select **Atlas Admin** (for development)
 6. Click **Add User**
 
@@ -58,7 +58,7 @@
 
 It should look like:
 ```
-mongodb+srv://bhavyaksingh654_db_user:faslDeOImf3QaDW8@cluster0.nampn7n.mongodb.net/?appName=Cluster0
+mongodb+srv://your_database_username:your_database_password@cluster0.nampn7n.mongodb.net/?appName=Cluster0
 ```
 
 ---
@@ -166,13 +166,11 @@ Once connected, these collections will be created:
 
 ## Your Current Status
 
-✅ Already configured:
-- MongoDB URI
-- JWT Secret Key
-- Node.js installed
-- Dependencies installed
-- Frontend & Backend running
+✅ **Currently using Local MongoDB** (secure - no exposed credentials)
+- Local MongoDB: `mongodb://localhost:27017/examable`
+- No Atlas credentials exposed in current setup
 
-⏳ Next:
-- Whitelist IP in MongoDB Atlas
-- Access the application at http://localhost:5173
+⚠️ **Atlas Setup** (requires new credentials):
+- Create new database user in Atlas
+- Update `server/.env` with new Atlas URI
+- Follow steps 1-6 above with new credentials
